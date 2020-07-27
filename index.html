@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src='./ejs.min.js'></script>
+		<script>
+			var html = ejs.render('fieldA:<%= fieldA %><br />fieldB:<%= fieldB %>',
+				{fieldA : 'Hello world!', fieldB : 'Hellow Taiwan!'});
+			window.onload = function() {
+				document.getElementById('divContent').innerHTML = html;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="divContent"></div>
+	</body>
+</html>
